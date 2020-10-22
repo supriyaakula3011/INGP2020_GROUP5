@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+<title>Registration</title>
+</head>
+<body background="C:\Users\user\Pictures\Saved Pictures\r1.jpg.png">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}">Visa Application Registration Form
+					</a>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+
+				<div th:if="${param.success}">
+					<div class="alert alert-info">You've Successfully Registered for this Application
+						</div>
+				</div>
+
+				<h1>Registration</h1>
+				<form th:action="@{/registration}" th:object="${user}" method="post">
+
+					<p class="error-message" th:if="${#fields.hasGlobalErrors()}"
+						th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation
+						error</p>
+
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
+						<label for="firstName" class="control-label">First name</label> <input
+							id="firstName" class="form-control" th:field="*{firstName}" />
+						<p class="error-message"
+							th:each="error: ${#fields.errors('firstName')}"
+							th:text="${error}">Validation error</p>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
+						<label for="lastName" class="control-label">Last name</label> <input
+							id="lastName" class="form-control" th:field="*{lastName}" />
+						<p class="error-message"
+							th:each="error : ${#fields.errors('lastName')}"
+							th:text="${error}">Validation error</p>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+						<label for="email" class="control-label">E-mail</label> <input
+							id="email" class="form-control" th:field="*{email}" />
+						<p class="error-message"
+							th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation
+							error</p>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('confirmEmail')}? 'has-error':''">
+						<label for="confirmEmail" class="control-label">Confirm
+							e-mail</label> <input id="confirmEmail" class="form-control"
+							th:field="*{confirmEmail}" />
+						<p class="error-message"
+							th:each="error : ${#fields.errors('confirmEmail')}"
+							th:text="${error}">Validation error</p>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+						<label for="password" class="control-label">Password</label> <input
+							id="password" class="form-control" type="password"
+							th:field="*{password}" />
+						<p class="error-message"
+							th:each="error : ${#fields.errors('password')}"
+							th:text="${error}">Validation error</p>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">
+						<label for="confirmPassword" class="control-label">Confirm
+							password</label> <input id="confirmPassword" class="form-control"
+							type="password" th:field="*{confirmPassword}" />
+						<p class="error-message"
+							th:each="error : ${#fields.errors('confirmPassword')}"
+							th:text="${error}">Validation error</p>
+					</div>
+	
+	<div class="form-group">
+  <label for="psprt">Passport Number:</label>
+  <input type="text" class="form-control" id="psprt">
+</div>
+<div class="form-group">
+  <label for="dob">Date Of Birth:</label>
+  <input type="text" class="form-control" id="dob">
+</div>				
+
+<div class="form-group">
+  <label for="sel1">Country Of Nationality:</label>
+  <select class="form-control" id="sel1">
+    <option>India</option>
+    <option>USA</option>
+    <option>UK</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="sel1">Gender:</label>
+  <select class="form-control" id="sel1">
+    <option>Male</option>
+    <option>Female</option>
+    <option>Transgender</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="sel1">Marital Status:</label>
+  <select class="form-control" id="sel1">
+    <option>Single</option>
+    <option>Married</option>
+  </select>
+</div>
+
+
+<div class="form-group">
+  <label for="comment">Give details of the main purpose of your visit and anything else you plan to do on your trip?</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+
+<div class="form-group">
+  <label for="doa">Date Of Application:</label>
+  <input type="text" class="form-control" id="doa">
+</div>
+<div class="form-group">
+  <label for="tov">Type Of Visa:</label>
+  <input type="text" class="form-control" id="tov">
+</div>
+
+<div class="form-group">
+  <label for="so">Service Option:</label>
+  <input type="text" class="form-control" id="so">
+</div>
+<div class="form-group">
+  <label for="dov">Duration Of Visa:</label>
+  <input type="text" class="form-control" id="dov">
+</div>	
+
+<div class="form-group">
+  <label for="pob">Place Of Birth</label>
+  <input type="text" class="form-control" id="pob">
+</div>
+				
+					
+					
+<div class="form-group">
+  <label for="tf">Total Fee:</label>
+  <input type="text" class="form-control" id="tf">
+</div>
+<div class="form-group">
+  <label for="som">Submission Method:</label>
+  <input type="text" class="form-control" id="som">
+</div>
+<div class="form-group">
+  <label for="cm">Contact Language:</label>
+  <input type="text" class="form-control" id="cm">
+</div>
+<div class="form-group">
+  <label for="pr">Payment Reference:</label>
+  <input type="text" class="form-control" id="pr">
+</div>
+          
+				
+<p><strong>Have you ever been a member of, or given support to, an organization which has been concerned I
+terrorism?</strong></p>
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultChecked2" name="defaultExample2" checked>
+  <label class="custom-control-label" for="defaultChecked2"> NO</label>
+</div>									
+<p>Have you ever been involved in, supported or encouraged terrorist activities in any country?</p>
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialChecked2" name="materialExample2" checked>
+  <label class="form-check-label" for="materialChecked2">NO</label>
+</div>				
+<p>In either peace or war time have you ever been involved in, or suspected of involvement in, war
+crimes, crimes against humanity?</p>
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+  <label class="custom-control-label" for="defaultUnchecked">YES</label>
+
+
+  <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+  <label class="custom-control-label" for="defaultChecked">NO</label>
+</div>								
+<p>Is there any other information about your character or behaviour which you would like to make us
+aware of?</p>
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+  <label class="form-check-label" for="materialUnchecked">YES</label>
+
+
+  <input type="radio" class="form-check-input" id="materialChecked" name="materialExampleRadios" checked>
+  <label class="form-check-label" for="materialChecked">NO</label>
+</div>						
+<p>Have you ever engaged in any other activities which might indicate that you may not be considered
+to be a person of good character?</p>
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultUncheckedDisabled2" name="disabledGroupExample" disabled>
+  <label class="custom-control-label" for="defaultUncheckedDisabled2">YES</label>
+  <input type="radio" class="custom-control-input" id="defaultCheckedDisabled2" name="disabledGroupExample" checked disabled>
+  <label class="custom-control-label" for="defaultCheckedDisabled2">NO</label>
+</div>					
+<p>Have you, as a part of your employment or otherwise, undertaken paid or unpaid activity on
+behalf of a non-UK government which you know to be dangerous to the interests or national security
+of the UK or its allies?</p>
+			
+					<div>
+  <input type="radio" class="form-check-input" id="materialUncheckedDisabled2" name="disabledGroupExample2" disabled>
+  <label class="form-check-label disabled" for="materialUncheckedDisabled2">YES</label>
+  <input type="radio" class="form-check-input" id="materialCheckedDisabled2" name="disabledGroupExample2" checked disabled>
+  <label class="form-check-label disabled md-disabled" for="materialCheckedDisabled2">NO</label>
+</div>
+								
+<p>Have you, by any means or medium, expressed any extremist views?
+Have you ever been a member of, or given support to, an organization which is or has been
+concerned with extremism?</p>
+			
+					
+					
+					<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultUncheckedDisabled2" name="disabledGroupExample" disabled>
+  <label class="custom-control-label" for="defaultUncheckedDisabled2">YES</label>
+  <input type="radio" class="custom-control-input" id="defaultCheckedDisabled2" name="disabledGroupExample" checked disabled>
+  <label class="custom-control-label" for="defaultCheckedDisabled2">NO</label>
+</div>
+					
+					
+					
+					
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('terms')}? 'has-error':''">
+						<input id="terms" type="checkbox" th:field="*{terms}" />   <label
+							class="control-label" for="terms"> I agree with the <a
+							href="#">terms and conditions</a> for Registration.
+						</label>
+						<p class="error-message"
+							th:each="error : ${#fields.errors('terms')}" th:text="${error}">Validation
+							error</p>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success">Apply</button>
+						<span>Already Registered? <a href="/" th:href="@{/login}">Check Status
+								Here</a></span>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>
