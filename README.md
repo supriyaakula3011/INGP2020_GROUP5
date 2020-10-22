@@ -1,10 +1,10 @@
 # INGP2020_GROUP5
 # GROUP5:
-Akula Supriya :Database and Backend
+Akula Supriya : Database and Backend
 
-Ganesh Akhil :Frontend
+Ganesh Akhil : Frontend
         
-SCRUM MASTER:Supriya Akula
+SCRUM MASTER : Supriya Akula
 
 # In this visa application registration form we created a user registration form with Spring Boot, Spring Security, Hibernate and Thymeleaf. We validate the user registration fields with hibernate validator annotations and a custom field matching validator to validate if the email and password fields match. If those fields are matched then it shows your visa application form is being processed. Those registration details are stored in DNA DATABASE in MYSQL.
 
@@ -82,7 +82,7 @@ CREATE TABLE `users_roles` (
   CONSTRAINT `FKt4v0rrweyk393bdgt107vdx0x` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-SELECT * FROM USER;
+SELECT * FROM user;
 
 # AUTHOR
 SUPRIYA AKULA
