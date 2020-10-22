@@ -1,34 +1,52 @@
 # INGP2020_GROUP5
 # GROUP5:
 Akula Supriya :Database and Backend
+
 Ganesh Akhil :Frontend
         
 # SCRUM MASTER:Supriya Akula
 
 # Tools and Technologies Used
 Spring Boot 
+
 JDK - 1.8
+
 Spring Framework 
+
 Hibernate 
+
 Maven 
+
 IDE - Spring Tool Suite (STS)
+
 Tomcat 
+
 Thymeleaf 
+
 Bootstrap 
+
 JQuery 
+
 MySQL 
 
 # Generate: Maven Project
 Java Version: 1.8 (Default)
+
 Spring Boot:2.0.4
+
 Group: com.visaapp
+
 Artifact: Visa-Registration-Application-Form
+
 Name: Visa-Registration-Application-Form
+
 Package Name : com.visa.app
+
 Dependencies: Web, JPA, MySQL,Thymeleaf,Security
 
 # DATABASES
 CREATE DATABASE DNA;
+
 USE DNA;
 
 CREATE TABLE `role` (
