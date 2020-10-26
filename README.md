@@ -34,7 +34,7 @@ MySQL
 # Generate: Maven Project
 Java Version: 1.8 (Default)
 
-Spring Boot:2.0.4
+Spring Boot
 
 Group: com.visaapp
 
