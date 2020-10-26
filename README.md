@@ -46,7 +46,7 @@ Package Name : com.visa.app
 
 Dependencies: Web, JPA, MySQL,Thymeleaf,Security
 
-# DATABASES
+# DATABASE :
 CREATE DATABASE DNA;
 
 USE DNA;
