@@ -1,16 +1,16 @@
 # INGP2020_GROUP5
 # GROUP5:
-Akula Supriya : Database and Backend
+Supriya Akula : Database and Backend
 
 Ganesh Akhil : Frontend
         
-SCRUM MASTER : Supriya Akula
+SCRUM MASTER : Supriya
 
 # Frontend : Angular
 # Backend : Springboot
 # Database : MYSQL
 
-#  In this visa registration form we created a visa application registration form with Angular and connected with Spring Boot and MYSQL.If we enter those details in Angular Page and submit the form. Those registration details are stored in DNA DATABASE in MYSQL.
+#  In this visa registration form we created a visa application registration form with Angular and connected with Spring Boot and MYSQL.If we enter those details in Frontend Page and submit the form.Then, automatically those registration details are stored in DNA_DB DATABASE in MYSQL.
 
 # Tools
 Spring Boot 
@@ -19,19 +19,11 @@ JDK - 1.8
 
 Spring Framework 
 
-Hibernate 
-
 Maven 
 
 IDE - Spring Tool Suite (STS)
 
-Tomcat 
-
-Thymeleaf 
-
-Bootstrap 
-
-JQuery 
+Tomcat  
 
 MySQL 
 
@@ -40,55 +32,30 @@ Java Version: 1.8 (Default)
 
 Spring Boot
 
-Group: com.visaapp
+Group: com.visa
 
-Artifact: Visa-Registration-Application-Form
+Artifact: Visaapp-Registration-Form
 
-Name: Visa-Registration-Application-Form
+Name: Visaapp-Registration-Form
 
-Package Name : com.visa.app
+Package Name : com.app.visa
 
-Dependencies: Web, JPA, MySQL,Thymeleaf,Security
+Dependencies: Web, JPA, MySQL
 
 # DATABASE :
-CREATE DATABASE DNA;
+CREATE DATABASE DNA_DB;
 
-USE DNA;
+USE DNA_DB;
 
+create table USER_REG_TBL(id integer not null,country varchar(255),email varchar(255),experience integer not null,name varchar(255),primary key(id)) engine = MyISAM;
 
-CREATE TABLE `role` (
-  `id` bigint(20) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+select * from USER_REG_TBL;
 
-
-
-CREATE TABLE `user` (
-  `id` bigint(20) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `first_name` varchar(255) DEFAULT NULL,
-  `last_name` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UKob8kqyqqgmefl0aco34akdtpe` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-
-
-
-CREATE TABLE `users_roles` (
-  `user_id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
-  KEY `FKt4v0rrweyk393bdgt107vdx0x` (`role_id`),
-  KEY `FKgd3iendaoyh04b95ykqise6qh` (`user_id`),
-  CONSTRAINT `FKgd3iendaoyh04b95ykqise6qh` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  CONSTRAINT `FKt4v0rrweyk393bdgt107vdx0x` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-SELECT * FROM user;
+# Sprintboot: run in url - http://localhost:9090/register      
+# Angular:run in url - http://localhost:4200/register  and http://localhost:4200/search
 
 # AUTHOR
 SUPRIYA AKULA
 
 GANESH AKHIL
+
