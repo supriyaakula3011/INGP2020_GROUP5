@@ -6,7 +6,11 @@ Ganesh Akhil : Frontend
         
 SCRUM MASTER : Supriya Akula
 
-# In this visa application registration form we created a visa registration form with Spring Boot, Spring Security, Hibernate and Thymeleaf. We validate the user registration fields with hibernate validator annotations and a custom field matching validator to validate if the email and password fields match. If those fields are matched then it shows your visa application form is being processed. Those registration details are stored in DNA DATABASE in MYSQL.
+# Frontend : Angular
+# Backend : Springboot
+# Database : MYSQL
+
+#  In this visa registration form we created a visa application registration form with Angular and connected with Spring Boot and MYSQL.If we enter those details in Angular Page and submit the form. Those registration details are stored in DNA DATABASE in MYSQL.
 
 # Tools
 Spring Boot 
