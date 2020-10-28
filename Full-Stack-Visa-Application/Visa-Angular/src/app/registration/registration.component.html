@@ -1,0 +1,233 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center" >
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: <small>This will be your login user
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="user.name" name="name" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> Email: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.email" name="email" id="txt" required
+                            placeholder="Enter valid email address" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname"><span class="req">* </span> Experience : </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.experience" name="experience" id="txt"
+                            placeholder="Total year of experience" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> Country : </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.country" name="country"
+                            id="email" placeholder="country" />
+                        <div class="status" id="status"></div>
+                    </div>
+
+
+ <!--<div class="form-group">
+                        <label for="applicant"><span class="req">* </span> ApplicantId: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.applicantid" name="applicantid" id="txt"
+                            placeholder="applicant number" required />
+                            <div class="state" id="state"></div>
+                    </div>
+<div class="form-group">
+                        <label for="passport"><span class="req">* </span> PassportNumber: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.passportnumber" name="passportnumber" id="txt"
+                            placeholder="passport number" required/>
+                            <div class="states" id="states"></div>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="psprt">Passport Number:</label>
+                        <input type="text" class="form-control" id="psprt">
+                      </div>
+                      <div class="form-group">
+                        <label for="dob">Date Of Birth:</label>
+                        <input type="text" class="form-control" id="dob">
+                      </div>				
+                      
+                      <div class="form-group">
+                        <label for="sel1">Country Of Nationality:</label>
+                        <select class="form-control" id="sel1">
+                          <option>India</option>
+                          <option>USA</option>
+                          <option>UK</option>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="sel1">Gender:</label>
+                        <select class="form-control" id="sel1">
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Transgender</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="sel1">Marital Status:</label>
+                        <select class="form-control" id="sel1">
+                          <option>Single</option>
+                          <option>Married</option>
+                        </select>
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label for="comment">Give details of the main purpose of your visit and anything else you plan to do on your trip?</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="doa">Date Of Application:</label>
+                        <input type="text" class="form-control" id="doa">
+                      </div>
+                      <div class="form-group">
+                        <label for="tov">Type Of Visa:</label>
+                        <input type="text" class="form-control" id="tov">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="so">Service Option:</label>
+                        <input type="text" class="form-control" id="so">
+                      </div>
+                      <div class="form-group">
+                        <label for="dov">Duration Of Visa:</label>
+                        <input type="text" class="form-control" id="dov">
+                      </div>	
+                      
+                      <div class="form-group">
+                        <label for="pob">Place Of Birth</label>
+                        <input type="text" class="form-control" id="pob">
+                      </div>
+                                      
+                                          
+                                          
+                      <div class="form-group">
+                        <label for="tf">Total Fee:</label>
+                        <input type="text" class="form-control" id="tf">
+                      </div>
+                      <div class="form-group">
+                        <label for="som">Submission Method:</label>
+                        <input type="text" class="form-control" id="som">
+                      </div>
+                      <div class="form-group">
+                        <label for="cm">Contact Language:</label>
+                        <input type="text" class="form-control" id="cm">
+                      </div>
+                      <div class="form-group">
+                        <label for="pr">Payment Reference:</label>
+                        <input type="text" class="form-control" id="pr">
+                      </div>
+                                
+                                      
+                      <p><strong>Have you ever been a member of, or given support to, an organization which has been concerned I
+                      terrorism?</strong></p>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultChecked2" name="defaultExample2" checked>
+                        <label class="custom-control-label" for="defaultChecked2"> NO</label>
+                      </div>									
+                      <p>Have you ever been involved in, supported or encouraged terrorist activities in any country?</p>
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialChecked2" name="materialExample2" checked>
+                        <label class="form-check-label" for="materialChecked2">NO</label>
+                      </div>				
+                      <p>In either peace or war time have you ever been involved in, or suspected of involvement in, war
+                      crimes, crimes against humanity?</p>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                        <label class="custom-control-label" for="defaultUnchecked">YES</label>
+                      
+                      
+                        <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+                        <label class="custom-control-label" for="defaultChecked">NO</label>
+                      </div>								
+                      <p>Is there any other information about your character or behaviour which you would like to make us
+                      aware of?</p>
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+                        <label class="form-check-label" for="materialUnchecked">YES</label>
+                      
+                      
+                        <input type="radio" class="form-check-input" id="materialChecked" name="materialExampleRadios" checked>
+                        <label class="form-check-label" for="materialChecked">NO</label>
+                      </div>						
+                      <p>Have you ever engaged in any other activities which might indicate that you may not be considered
+                      to be a person of good character?</p>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUncheckedDisabled2" name="disabledGroupExample" disabled>
+                        <label class="custom-control-label" for="defaultUncheckedDisabled2">YES</label>
+                        <input type="radio" class="custom-control-input" id="defaultCheckedDisabled2" name="disabledGroupExample" checked disabled>
+                        <label class="custom-control-label" for="defaultCheckedDisabled2">NO</label>
+                      </div>					
+                      <p>Have you, as a part of your employment or otherwise, undertaken paid or unpaid activity on
+                      behalf of a non-UK government which you know to be dangerous to the interests or national security
+                      of the UK or its allies?</p>
+                                  
+                                          <div>
+                        <input type="radio" class="form-check-input" id="materialUncheckedDisabled2" name="disabledGroupExample2" disabled>
+                        <label class="form-check-label disabled" for="materialUncheckedDisabled2">YES</label>
+                        <input type="radio" class="form-check-input" id="materialCheckedDisabled2" name="disabledGroupExample2" checked disabled>
+                        <label class="form-check-label disabled md-disabled" for="materialCheckedDisabled2">NO</label>
+                      </div>
+                                                      
+                      <p>Have you, by any means or medium, expressed any extremist views?
+                      Have you ever been a member of, or given support to, an organization which is or has been
+                      concerned with extremism?</p>
+                                  
+                                          
+                                          
+                                          <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUncheckedDisabled2" name="disabledGroupExample" disabled>
+                        <label class="custom-control-label" for="defaultUncheckedDisabled2">YES</label>
+                        <input type="radio" class="custom-control-input" id="defaultCheckedDisabled2" name="disabledGroupExample" checked disabled>
+                        <label class="custom-control-label" for="defaultCheckedDisabled2">NO</label>
+                      </div>
+                      <div class="form-group"
+						th:classappend="${#fields.hasErrors('terms')}? 'has-error':''">
+						<input id="terms" type="checkbox" th:field="*{terms}" />   <label
+							class="control-label" for="terms"> I agree with the <a
+							href="#">terms and conditions</a> for Registration.
+						</label>
+						<p class="error-message"
+							th:each="error : ${#fields.errors('terms')}" th:text="${error}"></p>
+					</div>
+						
+						
+
+
+
+
+
+
+
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+

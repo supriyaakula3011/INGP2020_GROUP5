@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: user
+Build-Jdk: 14.0.2
+Implementation-Title: Visaapp-Registration-Form
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.visa
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/Visaapp-Registration-Form
+Created-By: Maven Integration for Eclipse
+
