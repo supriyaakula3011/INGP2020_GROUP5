@@ -19,6 +19,8 @@ JDK - 1.8
 
 Spring Framework 
 
+Hibernet
+
 Maven 
 
 IDE - Spring Tool Suite (STS)
@@ -51,7 +53,7 @@ create table USER_REG_TBL(id integer not null,country varchar(255),email varchar
 
 select * from USER_REG_TBL;
 
-# Sprintboot: run in url - http://localhost:9090/register      
+# Sprintboot: http://localhost:9090/      
 # Angular:run in url - http://localhost:4200/register  and http://localhost:4200/search
 
 # AUTHOR
