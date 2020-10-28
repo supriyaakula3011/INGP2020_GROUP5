@@ -6,8 +6,8 @@ Ganesh Akhil : Frontend
         
 SCRUM MASTER : Supriya
 
-# Frontend : Angular
-# Backend : Springboot
+# Frontend : Angular 8
+# Backend : Spring Boot(STS4)
 # Database : MYSQL
 
 #  In this visa registration form we created a visa application registration form with Angular and connected with Spring Boot and MYSQL.If we enter those details in Frontend Page and submit the form.Then, automatically those registration details are stored in DNA_DB DATABASE in MYSQL.
